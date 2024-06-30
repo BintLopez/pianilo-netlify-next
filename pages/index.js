@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AirtableEmbed from '../components/AirtableEmbed';
 import { getPosts } from '../utils/mdx-utils';
 
 import Footer from '../components/Footer';
@@ -17,6 +18,38 @@ export default function Index({ posts, globalData }) {
         <h1 className="mb-12 text-3xl text-center lg:text-5xl">
           {globalData.blogTitle}
         </h1>
+
+    <p>
+      Listen to Nilo on the keys, learn about works by femme, BIPOC, and queer composers, explore new music, expand the canon, and raise funds & awareness for reproductive justice.
+    </p>
+
+    <section>
+      <h3>Upcoming Events</h3>
+    </section>
+
+    <section>
+      <h3>Past Events</h3>
+    </section>
+
+    <section>
+      <h3>About</h3>
+      <p>
+          Pianilo is an avid amateur pianist and active member of the Asheville Area Piano Forum obsessed with exploring works by systematically neglected composers, like the women and people of color excluded from the classical music canon. She is particularly inspired by Chiquinha Gonzaga, the first woman conductor in Brazil, first pianist of the Brazilian genre Choro, and abolitionist who used her concerts to champion the abolition of slavery in Brazil. From freeing the Atlanta Forest Defenders to freeing abortion to freeing Palestine, Nicole tries to be like Chinquinha and focuses her piano performance on raising funds and awareness of liberation struggles. When she’s not playing piano, Nicole builds tech for abortion access with <a href="https://midwestaccesscoalition.org">Midwest Access Coalition</a> and is an organizer with <a href="https://techies4rj.org">Techies for Reproductive Justice</a> and <a href="https://codewithasheville.org">Code with Asheville</a>.
+      </p>
+    </section>
+
+    <section>
+      <h3>Contact</h3>
+      <p>
+        Want to connect? Concert and fundraiser idea? Repertoire recommendations? Reach out!
+      </p>
+    </section>
+
+
+
+
+
+
         <ul className="w-full">
           {posts.map((post) => (
             <li
@@ -45,7 +78,10 @@ export default function Index({ posts, globalData }) {
             </li>
           ))}
         </ul>
+
+        <p>Want a pianist for your fundraiser? Curious about femme, BIPOC, and queer composers? <Link href={"https://airtable.com/appHHvX86wYGcjdLS/shryJfTrzowj7XA5G"}>Reach out!</Link></p>
       </main>
+      <AirtableEmbed link={"https://airtable.com/embed/appHHvX86wYGcjdLS/shr18xsv8K57Af3iD?viewControls=on"} />
       <Footer copyrightText={globalData.footerText} />
       <GradientBackground
         variant="large"
@@ -65,3 +101,4 @@ export function getStaticProps() {
 
   return { props: { posts, globalData } };
 }
+
