@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/ArrowIcon';
+import Tile from '../components/Tile';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 
@@ -19,28 +20,30 @@ export default function Index({ posts, globalData }) {
           {globalData.blogTitle}
         </h1>
 
-    <p>
-      Listen to Nilo on the keys, learn about works by femme, BIPOC, and queer composers, explore new music, expand the canon, and raise funds & awareness for reproductive justice.
-    </p>
 
-    <AirtableEmbed link={"https://airtable.com/embed/appHHvX86wYGcjdLS/shr18xsv8K57Af3iD?viewControls=on"} />
-
-    
-<p>    </p>
-
-    <ul className="w-full">
-      <li
-        className="transition bg-white border border-b-0 border-gray-800 md:first:rounded-t-lg md:last:rounded-b-lg backdrop-blur-lg dark:bg-black dark:bg-opacity-30 bg-opacity-10 hover:bg-opacity-20 dark:hover:bg-opacity-50 dark:border-white border-opacity-10 dark:border-opacity-10 last:border-b hover:border-b hovered-sibling:border-t-0"
-      >
-        <Link href={"https://airtable.com/appHHvX86wYGcjdLS/shryJfTrzowj7XA5G"} className="block px-6 py-6 lg:py-10 lg:px-16 focus:outline-none focus:ring-4">
-          <h2 className="text-2xl md:text-3xl">Say hello</h2>
-          <p className="mt-3 text-lg opacity-60">
-            Want a pianist for your fundraiser? Curious about femme, BIPOC, and queer composers? Reach out!
+        <div className="flex flex-col items-center py-16">
+          <p className="mb-3 font-bold uppercase dark:text-white opacity-60">
+            Pianist playing piano music by women and BIPOC composers of past and present to expand the canon and fundraise for collective liberation
           </p>
-        </Link>
-      </li>
-    </ul>
+        </div>
 
+        <h2 className="text-2xl md:text-3xl">Events</h2>
+          <p className="mt-3 text-lg opacity-60">
+            Peruse Pianilo's past and future piano events.
+          </p>
+        <AirtableEmbed link={'https://airtable.com/embed/appHHvX86wYGcjdLS/shr18xsv8K57Af3iD?viewControls=on'} />
+
+        <Tile 
+          title={'About'} 
+          text={ 'Pianilo is a pianist focused on exploring works by systematically neglected composers, like the women and people of color excluded from the classical music canon. She is particularly inspired by Chiquinha Gonzaga, the first woman conductor in Brazil, first pianist of the Brazilian genre Choro, and abolitionist who used her concerts to champion the abolition of slavery in Brazil. From freeing the Atlanta Forest Defenders to freeing abortion to freeing Palestine, Nilo tries to be like Chinquinha by focusing her piano performance on raising funds and awareness of liberation struggles.' }
+        />
+
+        <Tile 
+          title={'Connect'} 
+          text={ 'Want a pianist for your fundraiser? Curious about femme, BIPOC, and queer composers? Reach out!' }
+        >
+        </Tile>
+        <AirtableEmbed link={'https://airtable.com/embed/appHHvX86wYGcjdLS/shryJfTrzowj7XA5G'} />
       </main>
       
       <Footer copyrightText={globalData.footerText} />
