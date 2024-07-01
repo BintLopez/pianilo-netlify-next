@@ -29,7 +29,7 @@ export default function Index({ posts, globalData }) {
 
         <h2 className="text-2xl md:text-3xl">Events</h2>
           <p className="mt-3 text-lg opacity-60">
-            Peruse Pianilo's past and future piano events.
+            Peruse past and future piano events.
           </p>
         <AirtableEmbed link={'https://airtable.com/embed/appHHvX86wYGcjdLS/shr18xsv8K57Af3iD?viewControls=on'} />
 
