@@ -46,7 +46,7 @@ export default function Index({ posts, globalData }) {
         <AirtableEmbed link={'https://airtable.com/embed/appHHvX86wYGcjdLS/shryJfTrzowj7XA5G'} />
       </main>
       
-      <Footer copyrightText={globalData.footerText} />
+      <Footer copyrightText="Pianilo 2024 ~ Free Palestine" />
       <GradientBackground
         variant="large"
         className="fixed top-20 opacity-40 dark:opacity-60"
